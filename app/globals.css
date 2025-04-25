@@ -127,3 +127,21 @@ body {
     @apply text-foreground;
   }
 }
+
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: var(--preto);
+}
+  ::-webkit-scrollbar-thumb {
+  background-color: var(--vermelho);
+  border-radius: 5px;
+}
+  ::-webkit-scrollbar-thumb:hover {
+  background-color: var(--vermelho);
+}
+  ::-webkit-scrollbar-thumb:active {
+  background-color: var(--vermelho);
+}
+  ::-webkit-scrollbar-thumb:window-inactive {
+  background-color: var(--vermelho);
+}

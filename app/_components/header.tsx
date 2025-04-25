@@ -20,8 +20,8 @@ const Header = () => {
           <span>
             <FilePenLine className="text-zinc-400" />
           </span>
-          <div className="flex items-center gap-2 rounded-3xl bg-zinc-800 p-2 border border-zinc-600">
-            <span className="text-zinc-200">Username</span>
+          <div className="flex items-center gap-2 rounded-3xl bg-zinc-900 p-2 border border-zinc-600">
+            <span className="text-zinc-400">Username</span>
             <Image
               src={"/user.svg"}
               alt="Imagem de usuário"
