@@ -1,0 +1,22 @@
+<svg width="1728" height="130" viewBox="0 0 1728 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_1216_53)">
+<mask id="path-1-outside-1_1216_53" maskUnits="userSpaceOnUse" x="-5" y="-5" width="1738" height="127" fill="black">
+<rect fill="white" x="-5" y="-5" width="1738" height="127"/>
+<path d="M0 0H1728V117H0V0Z"/>
+</mask>
+<path d="M0 0H1728V117H0V0Z" fill="#0A0A0A" fill-opacity="0.0392157" shape-rendering="crispEdges"/>
+<g clip-path="url(#paint0_angular_1216_53_clip_path)" data-figma-skip-parse="true" mask="url(#path-1-outside-1_1216_53)"><g transform="matrix(-0.4725 3.36481e-08 -4.05736e-08 -0.577594 864 117)"><foreignObject x="-1839.15" y="-1839.15" width="3678.31" height="3678.31"><div xmlns="http://www.w3.org/1999/xhtml" style="background:conic-gradient(from 90deg,rgba(17, 11, 10, 0.8669) 0deg,rgba(10, 10, 10, 0.86) 0.285437deg,rgba(10, 10, 10, 0.86) 180.205deg,rgba(151, 34, 27, 1) 184.832deg,rgba(157, 36, 29, 1) 354.452deg,rgba(17, 11, 10, 0.8669) 360deg);height:100%;width:100%;opacity:1"></div></foreignObject></g></g><path d="M0 0V-5H-5V0H0ZM1728 0H1733V-5H1728V0ZM1728 117V122H1733V117H1728ZM0 117H-5V122H0V117ZM0 0V5H1728V0V-5H0V0ZM1728 0H1723V117H1728H1733V0H1728ZM1728 117V112H0V117V122H1728V117ZM0 117H5V0H0H-5V117H0Z" data-figma-gradient-fill="{&#34;type&#34;:&#34;GRADIENT_ANGULAR&#34;,&#34;stops&#34;:[{&#34;color&#34;:{&#34;r&#34;:0.039215687662363052,&#34;g&#34;:0.039215687662363052,&#34;b&#34;:0.039215687662363052,&#34;a&#34;:0.86000001430511475},&#34;position&#34;:0.00079288188135251403},{&#34;color&#34;:{&#34;r&#34;:0.039215687662363052,&#34;g&#34;:0.039215687662363052,&#34;b&#34;:0.039215687662363052,&#34;a&#34;:0.86000001430511475},&#34;position&#34;:0.50057005882263184},{&#34;color&#34;:{&#34;r&#34;:0.59304481744766235,&#34;g&#34;:0.13607104122638702,&#34;b&#34;:0.10950795561075211,&#34;a&#34;:1.0},&#34;position&#34;:0.51342087984085083},{&#34;color&#34;:{&#34;r&#34;:0.61568629741668701,&#34;g&#34;:0.14117647707462311,&#34;b&#34;:0.11372549086809158,&#34;a&#34;:1.0},&#34;position&#34;:0.98458898067474365}],&#34;stopsVar&#34;:[{&#34;color&#34;:{&#34;r&#34;:0.039215687662363052,&#34;g&#34;:0.039215687662363052,&#34;b&#34;:0.039215687662363052,&#34;a&#34;:0.86000001430511475},&#34;position&#34;:0.00079288188135251403},{&#34;color&#34;:{&#34;r&#34;:0.039215687662363052,&#34;g&#34;:0.039215687662363052,&#34;b&#34;:0.039215687662363052,&#34;a&#34;:0.86000001430511475},&#34;position&#34;:0.50057005882263184},{&#34;color&#34;:{&#34;r&#34;:0.59304481744766235,&#34;g&#34;:0.13607104122638702,&#34;b&#34;:0.10950795561075211,&#34;a&#34;:1.0},&#34;position&#34;:0.51342087984085083},{&#34;color&#34;:{&#34;r&#34;:0.61568629741668701,&#34;g&#34;:0.14117647707462311,&#34;b&#34;:0.11372549086809158,&#34;a&#34;:1.0},&#34;position&#34;:0.98458898067474365}],&#34;transform&#34;:{&#34;m00&#34;:-945.0,&#34;m01&#34;:-8.1147220043931156e-05,&#34;m02&#34;:1336.50,&#34;m10&#34;:6.7296183260623366e-05,&#34;m11&#34;:-1155.1885986328125,&#34;m12&#34;:694.594238281250},&#34;opacity&#34;:1.0,&#34;blendMode&#34;:&#34;NORMAL&#34;,&#34;visible&#34;:true}" mask="url(#path-1-outside-1_1216_53)"/>
+</g>
+<defs>
+<filter id="filter0_d_1216_53" x="-9" y="-5" width="1746" height="135" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1216_53"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1216_53" result="shape"/>
+</filter>
+<clipPath id="paint0_angular_1216_53_clip_path"><path d="M0 0V-5H-5V0H0ZM1728 0H1733V-5H1728V0ZM1728 117V122H1733V117H1728ZM0 117H-5V122H0V117ZM0 0V5H1728V0V-5H0V0ZM1728 0H1723V117H1728H1733V0H1728ZM1728 117V112H0V117V122H1728V117ZM0 117H5V0H0H-5V117H0Z" mask="url(#path-1-outside-1_1216_53)"/></clipPath></defs>
+</svg>

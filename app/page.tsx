@@ -1,7 +1,13 @@
+import Banner from "./_components/banner";
+import Header from "./_components/header";
+import Modulos from "./_components/módulos";
+
 export default function Home() {
   return (
     <main>
-      <h1>Hello world!</h1>
+      <Header />
+      <Banner />
+      <Modulos />
     </main>
   );
 }
