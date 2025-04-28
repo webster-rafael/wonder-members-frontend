@@ -16,13 +16,13 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
 
 const formSchema = z.object({
-  username: z
+  email: z
     .string()
-    .min(4, {
-      message: "O nome de usuário deve conter pelo menos 4 caracteres.",
+    .min(1, {
+      message: "O email é obrigatório.",
     })
-    .regex(/^[a-zA-Z0-9]+$/, {
-      message: "O nome de usuário deve conter apenas letras e números.",
+    .email({
+      message: "O email deve ser um endereço de email válido.",
     }),
   password: z
     .string()
@@ -43,7 +43,7 @@ const Formlogin = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: "",
+      email: "",
       password: "",
     },
   });
@@ -60,14 +60,14 @@ const Formlogin = () => {
       >
         <FormField
           control={form.control}
-          name="username"
+          name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Usuário</FormLabel>
+              <FormLabel>E-mail</FormLabel>
               <FormControl>
                 <Input
                   className="focus-visible:ring-1 focus:ring-offset-0 focus:border-none border-zinc-800"
-                  placeholder="Seu nome de usuário"
+                  placeholder="Digite seu email..."
                   {...field}
                 />
               </FormControl>
@@ -84,7 +84,7 @@ const Formlogin = () => {
               <FormControl>
                 <Input
                   className="focus-visible:ring-1 focus:ring-offset-0 focus:border-none border-zinc-800"
-                  placeholder="Sua senha"
+                  placeholder="Digite sua senha..."
                   {...field}
                 />
               </FormControl>
