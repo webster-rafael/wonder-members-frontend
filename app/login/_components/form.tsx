@@ -1,6 +1,6 @@
 "use client";
 import { z } from "zod";
-
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -14,6 +14,9 @@ import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
+import { login } from "@/lib/auth";
+import { useAuthStore } from "@/store/auth-store";
+import Image from "next/image";
 
 const formSchema = z.object({
   email: z
@@ -35,11 +38,12 @@ const formSchema = z.object({
       {
         message:
           "A senha deve conter pelo menos 8 caracteres, uma letra maiúscula, uma letra minúscula, um número e um caractere especial.",
-      }
+      },
     ),
 });
 
 const Formlogin = () => {
+  const router = useRouter();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -48,15 +52,25 @@ const Formlogin = () => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      const { token, user } = await login(values.email, values.password);
+      useAuthStore.getState().setAuthenticated(true);
+      useAuthStore.getState().setUser(user);
+
+      document.cookie = `token=${token}; path=/; secure; samesite=strict; max-age=86400`;
+
+      router.push("/");
+    } catch (err) {
+      console.error(err);
+    }
   }
 
   return (
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-6 w-3/5 flex flex-col py-5"
+        className="flex w-[90%] flex-col space-y-6 py-5 lg:w-3/5"
       >
         <FormField
           control={form.control}
@@ -66,7 +80,7 @@ const Formlogin = () => {
               <FormLabel>E-mail</FormLabel>
               <FormControl>
                 <Input
-                  className="focus-visible:ring-1 focus:ring-offset-0 focus:border-none border-zinc-800"
+                  className="border-zinc-800 focus:border-none focus:ring-offset-0 focus-visible:ring-1"
                   placeholder="Digite seu email..."
                   {...field}
                 />
@@ -83,17 +97,17 @@ const Formlogin = () => {
               <FormLabel>Senha</FormLabel>
               <FormControl>
                 <Input
-                  className="focus-visible:ring-1 focus:ring-offset-0 focus:border-none border-zinc-800"
+                  className="border-zinc-800 focus:border-none focus:ring-offset-0 focus-visible:ring-1"
                   placeholder="Digite sua senha..."
                   {...field}
                 />
               </FormControl>
               <FormMessage />
               <Link
-                className="hover:underline underline-offset-4 decoration-red-900"
+                className="decoration-red-900 underline-offset-4 hover:underline"
                 href={"/forgot-password"}
               >
-                <p className="text-xs text-end text-zinc-500">
+                <p className="text-end text-xs text-zinc-500">
                   Esqueceu a senha?
                 </p>
               </Link>
@@ -105,6 +119,14 @@ const Formlogin = () => {
           Entrar
         </Button>
       </form>
+      <div>
+        <Image
+          src={"/logo.svg"}
+          alt="Logo da WONDER COSMETICS"
+          width={50}
+          height={50}
+        />
+      </div>
     </Form>
   );
 };

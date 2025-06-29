@@ -8,28 +8,52 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Image from "next/image";
+import Link from "next/link";
 
-export function CarouselSize() {
+interface Module {
+  id: string;
+  title: string;
+  image: string;
+  slug: string;
+}
+
+interface CarouselSizeProps {
+  modulos: Module[];
+}
+
+export function CarouselSize({ modulos }: CarouselSizeProps) {
   return (
-    <Carousel className="w-full">
-      <CarouselContent>
-        {Array.from({ length: 10 }).map((_, index) => (
-          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/6">
-            <div className="p-1">
-              <Card className="bg-zinc-700 border-none rounded-none">
-                <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <span className="text-3xl font-semibold">{index + 1}</span>
-                </CardContent>
-              </Card>
+    <Carousel className="h-full w-full">
+      <CarouselContent className="h-full w-full">
+        {modulos.map((modulo) => (
+          <CarouselItem
+            key={modulo.id}
+            className="h-full w-full md:basis-1/2 lg:basis-1/6"
+          >
+            <div className="h-full w-full p-1">
+              <Link href={`/modulos/${modulo.id}`}>
+                <Card className="h-full w-full rounded-none border-none bg-zinc-700">
+                  <CardContent className="flex aspect-square h-60 w-full items-center justify-center">
+                    <Image
+                      src={modulo.image}
+                      alt={modulo.title}
+                      width={1000}
+                      height={1000}
+                      className="h-full w-full"
+                    />
+                  </CardContent>
+                </Card>
+              </Link>
             </div>
           </CarouselItem>
         ))}
       </CarouselContent>
       <CarouselPrevious
         size={"lg"}
-        className="bg-transparent border-none text-[var(--vermelho)] hover:bg-transparent hover:text-red-800"
+        className="border-none bg-transparent text-[var(--vermelho)] hover:bg-transparent hover:text-red-800"
       />
-      <CarouselNext className="bg-transparent border-none text-[var(--vermelho)] hover:bg-transparent hover:text-red-800" />
+      <CarouselNext className="border-none bg-transparent text-[var(--vermelho)] hover:bg-transparent hover:text-red-800" />
     </Carousel>
   );
 }

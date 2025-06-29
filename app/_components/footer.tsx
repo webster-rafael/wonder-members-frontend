@@ -1,10 +1,9 @@
-import Link from "next/link";
-
 const Footer = () => {
   return (
-    <footer className="w-full h-20 flex justify-center items-center gap-4 text-sm text-zinc-400">
-      <Link href="/termos">Termos de uso</Link>
-      <Link href="/sobre">Sobre nós</Link>
+    <footer className="flex h-20 w-full items-center justify-center gap-4 text-xs text-zinc-400 lg:text-sm">
+      <span>Desenvolvido por Ahxterix</span>
+      <span>|</span>
+      <span>Todos os direitos reservados</span>
     </footer>
   );
 };
